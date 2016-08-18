@@ -1,0 +1,220 @@
+$font-family: Roboto, "Roboto", sans-serif !default;
+$font-weight: 300 !default;
+$font-weight-normal: 500;
+
+// Colours
+$white: #FFF;
+$black: #212121;
+$red: #ea3434;
+$grey-bg: #E0E0E0;
+$orange: #F57C00;       // Orange 700
+$orange-light: #FF9800; // Orange 500
+$blue: #1976D2;         // Blue 700
+$blue-light: #2196F3;   // Blue 500
+$purple: #512DA8;       // Purple 700
+$purple-light: #673AB7; // Purple 500
+$green: #388E3C;        // Green 700
+$green-light: #4CAF50;  // Green 500
+$grey: #455A64;         // Grey 700
+$grey-light: #607D8B;   // Grey 500
+
+// Misc
+$radius: 5px !default;
+$speed: 0.6s !default;
+
+//Screens
+$screen-lg: 1200px;
+$screen-md: 992px;
+$screen-sm: 768px;
+
+// Imports
+@import 'fonts';
+
+
+html, body {
+  font: $font-weight 18px $font-family;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: $font-weight;
+}
+
+h2 {
+  margin-bottom: 14px;
+  font-weight: $font-weight;
+}
+
+h3 {
+  font-weight-normal: $font-weight;
+}
+
+.lead { font-size: 24px; }
+
+button {
+  background-color: $blue;
+  font-family: $font-family;
+  font-size: 1.2em;
+  font-weight: $font-weight;
+  border: none;
+  padding: 10px;
+  opacity: 0.6;
+  color: $white;
+  border-radius: $radius;
+
+  &:focus {
+    outline:none;
+  }
+}
+
+.card {
+  transition: opacity $speed ease;
+  transition: color $speed ease;
+  transition: border $speed ease;
+
+  color: $white;
+  margin: 10px 0;
+  padding: 35px 15px 15px 15px;
+  border-radius: $radius;
+  border: 5px solid transparent;
+  padding: 30px 10px 10px 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  min-height: 370px;
+  position: relative;
+  z-index: 2;
+  opacity: 0.7;
+
+  &.orange {
+    background-color: $orange-light;
+  }
+
+  &.blue {
+    background-color: $blue-light;
+  }
+
+  &.purple {
+    background-color: $purple-light;
+  }
+
+  &.grey {
+    background-color: $grey-light;
+  }
+
+  &.green {
+    background-color: $green-light;
+  }
+
+  &.daily {
+    transition: opacity $speed ease;
+    opacity: 0.8;
+  }
+
+  &:hover, &:active {
+    transition: opacity $speed ease;
+    opacity: 0.8;
+  }
+
+  &.listed {
+    transition: opacity $speed ease;
+    transition: border $speed ease;
+    padding: 30px 10px 10px 10px;
+    opacity: 1;
+    border: 5px solid $red;
+    border-color: $red;
+    .heart {
+      transition: color $speed ease;
+      display: inline-block !important;
+      font-size: 36px;
+      color: $red;
+    }
+  }
+  .heart {
+    font-size: 36px;
+  }
+}
+
+.temp-now {
+  font-size: 36px;
+}
+
+.weather-now {
+  font-size: 16px;
+  text-transform: capitalize;
+}
+
+.highlow {
+  font-size: 18px;
+  margin: 0 0 5px;
+}
+
+.middle {
+  margin-top: 20px;
+  font-size: 14px;
+
+  .icon {
+    font-size: 36px;
+    margin-right: 2px;
+    vertical-align: bottom;
+    position: relative;
+    top: 5px;
+    float: left;
+  }
+
+  &:after {
+    // CLearfix hack
+    visibility: hidden;
+    display: block;
+    content: "";
+    clear: both;
+    height: 0;
+  }
+}
+
+.left {
+  float: left;
+  width: 49.8%;
+}
+
+.right {
+  float: right;
+  width: 49.8%;
+}
+
+.card-daily {
+  opacity: 0.9;
+  min-height: 100px;
+  &:hover {
+    opacity: 0.9;
+  }
+  .highlow {
+    font-size: 14px;
+    margin: 0 0 10px;
+  }
+  .weather-now {
+    font-size: 18px;
+  }
+  .bottom {
+    margin-top: 5px;
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+.footer {
+  margin: 40px 0 10px 0;
+}
+
+@media screen and (max-width:$screen-md) {
+
+}
+
+.icon {
+  font-family: "Meteocons", sans-serif;
+
+  &.big {
+    margin-top: -15px;
+    font-size: 75px;
+    float: right;
+  }
+}

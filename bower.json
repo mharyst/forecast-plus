@@ -1,0 +1,11 @@
+{
+  "name": "forecast-plus-app",
+  "description": "Forecast Plus App",
+  "version": "0.0.1",
+  "homepage": "https://bitbucket.org/mykhailo_h/forecast-plus",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "3.3.x"
+  }
+}

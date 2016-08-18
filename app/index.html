@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en" ng-app="forecastApp">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Forecast Plus App</title>
+  <link rel="stylesheet" href="libraries/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+  <body>
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Forecast Plus App</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class=""><a href="#/forecast">Forecasts</a></li>
+            <!-- <li class=""><a href="#/search">Search</a></li> -->
+            <li class=""><a href="#/favourite">Personal list</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+      <div ng-view>
+
+      </div>
+    </div>
+
+    <footer>
+			<div class="footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 text-center">
+							<p>Copyright 2016 <a href="http://862164.beats01.web.hosting-test.net/">Forecast Plus</a>.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- AngularJS -->
+<script src="libraries/angular.min.js"></script>
+<script src="libraries/angular-route.min.js"></script>
+<script src="libraries/angular-resource.min.js"></script>
+<!-- Bootstrap -->
+<script src="libraries/bootstrap.min.js"></script>
+<!-- App -->
+<script src="js/main.js"></script>
+<script src="js/services.js"></script>
+<script src="js/controller.js"></script>
+<script src="js/filters.js"></script>
+</body>
+</html>
