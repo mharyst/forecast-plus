@@ -1,18 +1,17 @@
 <section class="forecast">
   <div class="row">
     <div class="col-md-12">
-      <h1>Forecast Plus App</h1>
-      <p class="lead">We choose most popular cities for you. If you don't know which country to visit next, our list might help you.</p>
-      <p>You can add cities to <a href="#/favourite">your personal list</a> by clicking on a &#10084; icon.</p>
+      <h1>Your personal list</h1>
+      <p class="lead">It`s your personal list with cities that you have added before.</p>
+      <p>When you click on each city, on the right you will see the weather forecast for 4 days.</p>
     </div>
   </div>
   <div class="container">
     <div class="row">
-      <div class="col-md-9">
-        <h2>Travel cities</h2>
-        <span class="loading" ng-hide="flagLoading">Loading...</span>
+      <div class="col-md-9 city-card">
+        <h2>Your travel cities</h2>
         <div class="row">
-          <div ng-repeat="city in weatherData.list | limitTo: cnt">
+          <div ng-repeat="city in weatherDataLS.list">
             <a href ng-click="chooseCity(city.id)">
             <div class="col-md-4 col-sm-6 col-xs-12">
               <div class="card" id="{{city.id}}" ng-class="changeColour(city.weather[0].icon, city.id)">
@@ -33,8 +32,6 @@
                     <p>Sunrise: <span class="info">{{ city.sys.sunrise * 1000 | date : 'shortTime' }}</span></p>
                     <p>Sunset: <span class="info">{{ city.sys.sunset * 1000 | date : 'shortTime' }}</span></p>
                   </div>
-                </div>
-                <div class="bottom">
                   <span class="heart" ng-click="favourite(city.id)">&#10084;</span>
                 </div>
               </div>
@@ -42,17 +39,15 @@
           </a>
         </div>
         </div>
-        <button class="load-more" ng-click="loadMore()">Load more</button>
       </div>
 
-      <div class="col-md-3 daily-forecast">
+      <div class="col-md-3">
         <h2>{{headingForecast}}</h2>
-        <span class="loading" ng-hide="flagLoadingDetails">Loading...</span>
         <div class="heading-forecast">
           <h3>{{searchData.city.name}}</h3>
           <a href ng-click="closeCity()">{{close}}</a>
         </div>
-        <div ng-repeat="day in searchDataDays | limitTo: 4">
+        <div  ng-repeat="day in searchDataDays | limitTo: 4">
           <div class="card card-daily" ng-class="changeColour(day.weather[0].icon)">
             <div class="top">
               <p class="date">{{day.dt * 1000| date:'fullDate'}}</p>
@@ -60,14 +55,13 @@
               <p class="highlow">&#x25B2; {{round(day.temp.max)}}&nbsp;&deg;C / &#x25BC; {{round(day.temp.min)}}&nbsp;&deg;C</p>
               <p class="weather-now">{{ day.weather[0].description }}</p>
             </div>
-            <div class="bottom">
+            <div class="middle">
               <p>Wind speed: <span class="info">{{ day.speed }} m/s</span></p>
               <p>Humidity: <span class="info">{{ day.humidity }}%</span></p>
             </div>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
