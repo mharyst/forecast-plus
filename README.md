@@ -1,6 +1,6 @@
 # Forecast Plus App v1.0.2
 
-A simple App using AngularJS, SASS, LocalStorage and OpenWeatherMap API.
+A simple App using AngularJS, SASS, LocalStorage and [OpenWeatherMap API](https://openweathermap.org/api).
 
 Live version: [Demo](http://goo.gl/s8Fm7t).
 
@@ -20,5 +20,5 @@ User can add the city he has liked into the personal list to compare forecasts b
 
 1. Install all components: `npm install`
 2. Start the local web server: `npm start`
-3. Use your local SASS compiler
-4. Open a new browser tab and go to: http://localhost:8000/
+3. Use your local SASS compiler (if SASS files were edited)
+4. Open a new browser tab and go to: [http://localhost:8000/](http://localhost:8000/)
