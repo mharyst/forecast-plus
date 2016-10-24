@@ -2,7 +2,7 @@
   "name": "forecast-plus",
   "version": "1.0.2",
   "description": "Forecast Plus App",
-  "repository": "https://bitbucket.org/mykhailo_h/forecast-plus",
+  "repository": "https://github.com/mharyst/forecast-plus",
   "license": "MIT",
   "devDependencies": {
     "bower": "^1.7.7",

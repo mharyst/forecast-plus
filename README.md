@@ -1,8 +1,8 @@
-# Forecast Plus App v0.0.1
+# Forecast Plus App v1.0.2
 
 A simple App using AngularJS, SASS, LocalStorage and OpenWeatherMap API.
 
-Live version available at http://862164.beats01.web.hosting-test.net/
+Live version: [Demo](http://goo.gl/s8Fm7t).
 
 ## Overview
 
