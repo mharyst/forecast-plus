@@ -69,6 +69,7 @@ angular.module('forecastApp.controller', [])
        $scope.flagLoadingDetails = true;
        $scope.searchData = res;
        $scope.close = 'Close';
+       $scope.isBlockShows = 'shows';
        $scope.searchDataDays = res.list;
        $scope.headingForecast = 'Forecast for 4 days';
        var city = res.city.id;
@@ -84,6 +85,7 @@ angular.module('forecastApp.controller', [])
    $scope.closeCity = function() {
        $scope.searchData = '';
        $scope.close = '';
+       $scope.isBlockShows = '';
        $scope.searchDataDays = '';
        $scope.headingForecast = '';
        var el = document.getElementsByClassName('card');

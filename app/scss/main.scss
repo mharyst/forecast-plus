@@ -229,3 +229,29 @@ button {
     float: right;
   }
 }
+
+/*Mobile styles*/
+
+@media screen and (max-width: 992px) {
+  .cities-forecast.shows {
+    display: none;
+  }
+  .daily-forecast.shows {
+  	position: absolute;
+  	top: 55px;
+  	left: 0;
+  	background: #fff;
+  	width: 100%;
+  	z-index: 999;
+  }
+
+  .close-lnk {
+    text-align: center;
+  	display: block;
+  	font-size: 30px;
+  }
+
+  .github-stripe {
+    display: none;
+  }
+}

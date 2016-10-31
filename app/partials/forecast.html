@@ -8,7 +8,7 @@
   </div>
   <div class="container">
     <div class="row">
-      <div class="col-md-9">
+      <div class="col-md-9 cities-forecast" ng-class="isBlockShows">
         <h2>Travel cities</h2>
         <div class="loading" ng-hide="flagLoading"></div>
         <div class="row">
@@ -45,12 +45,12 @@
         <button class="load-more" ng-click="loadMore()">Load more</button>
       </div>
 
-      <div class="col-md-3 daily-forecast">
+      <div class="col-md-3 daily-forecast" ng-class="isBlockShows">
         <h2>{{headingForecast}}</h2>
         <div class="loading" ng-hide="flagLoadingDetails"></div>
         <div class="heading-forecast">
           <h3>{{searchData.city.name}}</h3>
-          <a href ng-click="closeCity()">{{close}}</a>
+          <a href ng-click="closeCity()" class="close-lnk">{{close}}</a>
         </div>
         <div ng-repeat="day in searchDataDays | limitTo: 4">
           <div class="card card-daily" ng-class="changeColour(day.weather[0].icon)">
