@@ -10,7 +10,7 @@
     <div class="row">
       <div class="col-md-9">
         <h2>Travel cities</h2>
-        <span class="loading" ng-hide="flagLoading">Loading...</span>
+        <div class="loading" ng-hide="flagLoading"></div>
         <div class="row">
           <div ng-repeat="city in weatherData.list | limitTo: cnt">
             <a href ng-click="chooseCity(city.id)">
@@ -47,7 +47,7 @@
 
       <div class="col-md-3 daily-forecast">
         <h2>{{headingForecast}}</h2>
-        <span class="loading" ng-hide="flagLoadingDetails">Loading...</span>
+        <div class="loading" ng-hide="flagLoadingDetails"></div>
         <div class="heading-forecast">
           <h3>{{searchData.city.name}}</h3>
           <a href ng-click="closeCity()">{{close}}</a>

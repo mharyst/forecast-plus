@@ -6,11 +6,20 @@ angular.module('forecastApp.controller', [])
   $scope.flagLoadingDetails = true;
 
    // Random Cities Generate
-   forecastAppApi.getRandomCitiesWeather().then(function (data) {
-     $scope.weatherData = data;
-     $scope.cnt = 9;
-     $scope.flagLoading = true;
-   });
+   forecastAppApi.getRandomCitiesWeather()
+    .then(
+      function (data) {
+        $scope.weatherData = data;
+        $scope.cnt = 9;
+        $scope.flagLoading = true;
+      }
+    )
+    .catch(
+      function (reject) {
+        console.error('ERROR getting random cities. Status:' + reject.status);
+        alert('Something went wrong :( Please, reload page or try later');
+      }
+    );
 
    // Cities from user list
    var listData = [];
@@ -24,10 +33,16 @@ angular.module('forecastApp.controller', [])
    getFromLS();
 
    //Send request
-   forecastAppApi.getWeatherFromList(listData).then(function (data) {
-     $scope.weatherDataLS = data;
-     $scope.cnt = 9;
-   });
+   forecastAppApi.getWeatherFromList(listData)
+    .then(function (data) {
+      $scope.weatherDataLS = data;
+      $scope.cnt = 9;
+    })
+    .catch(
+      function (reject) {
+        console.error('ERROR getting data from server. Status:' + reject.status);
+      }
+    );
 
    $scope.loadMore = function (cnt) {
      $scope.cnt += 9;
